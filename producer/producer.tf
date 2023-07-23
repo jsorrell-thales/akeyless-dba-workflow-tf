@@ -8,6 +8,7 @@ terraform {
 }
 
 variable "dyn_secret_config" {
+  
 }
 
 resource "akeyless_producer_mongo" "mongo_producer" {
@@ -18,7 +19,7 @@ resource "akeyless_producer_mongo" "mongo_producer" {
   mongodb_roles = jsonencode(var.dyn_secret_config.mongodb_roles)
 }
 
-resource "akeyless_role" "k8s-access-role" {
+resource "akeyless_role" "db-access-role" {
   name = var.dyn_secret_config.roleName
 
   dynamic "assoc_auth_method" {
