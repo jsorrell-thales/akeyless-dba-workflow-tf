@@ -5,22 +5,39 @@ terraform {
       source  = "akeyless-community/akeyless"
     }
   }
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  
   # backend "gcs" {
   #   bucket = "akeyless-cg-tf"
   #   prefix = "dba-example"
   # }
 }
 
-provider "akeyless" {
-  api_gateway_address = var.api_gateway_address
+# provider "akeyless" {
+#   api_gateway_address = var.api_gateway_address
 
-  api_key_login {
-    access_id  = var.access_id
-    access_key = var.access_key
-  }
+  
+# }
+
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
 }
 
-
+resource "aws_db_instance" "mysql" {
+  identifier            = "my-mysql-instance"  # Replace with a unique identifier for your instance
+  allocated_storage     = 20
+  engine                = "mysql"
+  engine_version        = "5.7"
+  instance_class        = "db.t2.micro"
+  name                  = "mydatabase"  # Replace with your desired database name
+  username              = "dbuser"  # Replace with your desired database username
+  password              = "dbpassword"  # Replace with your desired database password
+  publicly_accessible   = false
+}
 
 
 # module "mongodb_atlas_producer" {
