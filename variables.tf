@@ -20,12 +20,12 @@
 #     EOF
 # }
 
-variable "AKEYLESS_ACCESS_ID" {
-    type = string
-    description = "Access ID for the JWT Auth Method for Terraform cloud. Provided by Terraform Cloud through a terraform variable added to the workspace."
-}
+# variable "AKEYLESS_ACCESS_ID" {
+#     type = string
+#     description = "Access ID for the JWT Auth Method for Terraform cloud. Provided by Terraform Cloud through a terraform variable added to the workspace."
+# }
 
-variable "AKEYLESS_AUTH_JWT" {
-  type        = string
-  description = "Terraform Cloud Workload Identity JWT for authentication into Akeyless. Provided by Terraform Cloud through an agent pool and hooks."
-}
+# variable "AKEYLESS_AUTH_JWT" {
+#   type        = string
+#   description = "Terraform Cloud Workload Identity JWT for authentication into Akeyless. Provided by Terraform Cloud through an agent pool and hooks."
+# }
