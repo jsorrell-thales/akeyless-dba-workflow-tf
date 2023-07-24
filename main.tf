@@ -4,11 +4,11 @@ terraform {
       version = ">= 1.0.0"
       source  = "akeyless-community/akeyless"
     }
-  }
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+  }
   
   # backend "gcs" {
   #   bucket = "akeyless-cg-tf"
@@ -16,16 +16,21 @@ terraform {
   # }
 }
 
-# provider "akeyless" {
-#   api_gateway_address = var.api_gateway_address
-
+provider "akeyless" {
+  api_gateway_address = "https://api.akeyless.io"
+  jwt_login {
+    access_id = var.AKEYLESS_ACCESS_ID
+    jwt       = var.AKEYLESS_AUTH_JWT
+  }
   
-# }
+}
 
 # Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
 }
+
+# Make a aws mysql instance
 
 resource "aws_db_instance" "mysql" {
   identifier            = "my-mysql-instance"  # Replace with a unique identifier for your instance
