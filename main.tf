@@ -20,7 +20,6 @@ provider "akeyless" {
   api_gateway_address = "https://api.akeyless.io"
   jwt_login {
     access_id = var.AKEYLESS_ACCESS_ID
-    jwt       = var.AKEYLESS_AUTH_JWT
   }
   
 }
