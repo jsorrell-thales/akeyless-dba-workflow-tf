@@ -31,18 +31,17 @@ provider "aws" {
 
 # Make a aws mysql instance
 
-resource "aws_db_instance" "mysql" {
-  identifier            = "my-mysql-instance"  # Replace with a unique identifier for your instance
-  allocated_storage     = 20
-  engine                = "mysql"
-  engine_version        = "5.7"
-  instance_class        = "db.t2.micro"
-  name                  = "mydatabase"  # Replace with your desired database name
-  username              = "dbuser"  # Replace with your desired database username
-  password              = "dbpassword"  # Replace with your desired database password
-  publicly_accessible   = false
+resource "aws_db_instance" "default" {
+  allocated_storage    = 10
+  db_name              = "mydb"
+  engine               = "mysql"
+  engine_version       = "5.7"
+  instance_class       = "db.t3.micro"
+  username             = "foo"
+  password             = "foobarbaz"
+  parameter_group_name = "default.mysql5.7"
+  skip_final_snapshot  = true
 }
-
 
 # module "mongodb_atlas_producer" {
 #   source = "./producer"
