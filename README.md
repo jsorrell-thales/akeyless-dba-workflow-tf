@@ -1,4 +1,17 @@
 # akeyless-dba-workflow-tf-example
+## What this does
+This Repo creates uses github actions to dynamically generate aws credentials that the terraform provider can use to build out resources in the AWS environment the credentials are created for.  
+## Preqruistes
+1. Akeyless Gateway
+2. Akeyless Dynamic Secret: This will generate the aws credentials that will last the length of the terraform build. Docs are below: 
+- (https://www.akeyless.io/secrets-management-glossary/dynamic-secrets/) 
+- (https://docs.akeyless.io/docs/aws-producer)
+
+    1. Akeyless Target: A target is required to create a Akeyless Dynamic Secret
+    - (https://docs.akeyless.io/docs/aws-targets)
+    - This target will also require the correct permission for the Terraform resources being created
+3. Permissions to create a Akeyless Jwt Authentication Method
+4. AWS Environment
 
 
 ## AKeyless Setup
