@@ -1,4 +1,10 @@
 terraform {
+  cloud {
+    organization = "work-demos"
+    workspaces {
+      name = "akeyless-dba-workflow-tf"
+    }
+  }
   required_providers {
     akeyless = {
       version = ">= 1.0.0"
