@@ -1,9 +1,13 @@
 terraform {
-  cloud {
-    organization = "work-demos"
-    workspaces {
-      name = "akeyless-dba-workflow-tf"
-    }
+  # cloud {
+  #   organization = "work-demos"
+  #   workspaces {
+  #     name = "akeyless-dba-workflow-tf"
+  #   }
+  # }
+  backend "gcs" {
+    bucket = "customer-success-391112-terraform-state-bucket"
+    prefix = "terraform/state/dba-example"
   }
   required_providers {
     akeyless = {
