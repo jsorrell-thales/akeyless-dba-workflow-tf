@@ -10,7 +10,7 @@ This Repo creates uses github actions to dynamically generate aws credentials th
 - [AWS Producer](https://docs.akeyless.io/docs/aws-producer)
 
     1. Akeyless Target: A target is required to create a Akeyless Dynamic Secret
-    - (https://docs.akeyless.io/docs/aws-targets)
+    - [AWS Target](https://docs.akeyless.io/docs/aws-targets)
     - This target will also require the correct permission for the Terraform resources being created
 5. Permissions to create a Akeyless Jwt Authentication Method
 
