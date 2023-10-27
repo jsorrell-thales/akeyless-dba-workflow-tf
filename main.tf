@@ -5,6 +5,8 @@ terraform {
   #     name = "akeyless-dba-workflow-tf"
   #   }
   # }
+
+  # You can change this backend to be whatever you like.
   backend "gcs" {
     bucket = "customer-success-391112-terraform-state-bucket"
     prefix = "terraform/state/dba-example"
