@@ -6,8 +6,8 @@ This Repo creates uses github actions to dynamically generate aws credentials th
 2. [A Backend to store state.](https://medium.com/@surangajayalath299/what-is-terraform-backend-how-used-it-ea5b36f08396) 
 4. Akeyless Gateway
 5. Akeyless Dynamic Secret: This will generate the aws credentials that will last the length of the terraform build. Docs are below: 
-- (https://www.akeyless.io/secrets-management-glossary/dynamic-secrets/) 
-- (https://docs.akeyless.io/docs/aws-producer)
+- [AWS Dynamic Secrets](https://www.akeyless.io/secrets-management-glossary/dynamic-secrets/) 
+- [AWS Producer](https://docs.akeyless.io/docs/aws-producer)
 
     1. Akeyless Target: A target is required to create a Akeyless Dynamic Secret
     - (https://docs.akeyless.io/docs/aws-targets)
