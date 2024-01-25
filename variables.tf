@@ -22,8 +22,7 @@
 
  variable "api_gateway_address" {
    type        = string
-   description = <<-EOF
-#     value of the Akeyless Gateway 8081 port address 
+   description = "value of the Akeyless Gateway 8081 port address"
 #     Examples:
 #     - http://localhost:8081 if using port forwarding
 #     - http://your-gateway-ip-address:8081 if using a port
