@@ -1,9 +1,9 @@
- variable "aws_access_key_id" {
+ variable "AWS_access_key_id" {
    type        = string
    description = "the aws access key id"
  }
 
- variable "aws_access_secret_key" {
+ variable "AWS_access_secret_key" {
    type        = string
    description = "the aws access secret key"
  }
