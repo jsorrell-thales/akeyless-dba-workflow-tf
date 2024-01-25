@@ -1,15 +1,15 @@
 terraform {
-  # cloud {
-  #   organization = "work-demos"
-  #   workspaces {
-  #     name = "akeyless-dba-workflow-tf"
-  #   }
-  # }
+   cloud {
+     organization = "jsorrell-thales"
+     workspaces {
+       name = "akeyless-dba-workflow-tf"
+     }
+   }
 
   # You can change this backend to be whatever you like.
-  backend "gcs" {
-    bucket = "customer-success-391112-terraform-state-bucket"
-    prefix = "terraform/state/dba-example"
+  backend "local" {
+    # bucket = "customer-success-391112-terraform-state-bucket"
+    # prefix = "terraform/state/dba-example"
   }
   required_providers {
     akeyless = {
@@ -25,11 +25,11 @@ terraform {
   
 }
 
-# provider "akeyless" {
-#   api_gateway_address = "https://api.akeyless.io"
-#   jwt_login {
-#     access_id = var.AKEYLESS_ACCESS_ID
-#   }
+provider "akeyless" {
+   api_gateway_address = "https://api.akeyless.io"
+   jwt_login {
+     access_id = var.AKEYLESS_ACCESS_ID
+}
   
 # }
 
